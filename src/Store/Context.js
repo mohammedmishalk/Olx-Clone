@@ -6,8 +6,8 @@ export const AuthContext = createContext(null);
 
 export const LoadingContext = createContext();
 
-export default function context({ children }) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export default function Context({ children }) {
+ 
   const [user, setUser] = useState(null);
   return (
     <AuthContext.Provider value={{ user, setUser }}>
@@ -17,7 +17,7 @@ export default function context({ children }) {
 }
 
 export function Loading({ children }) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+ 
   const [load, setLoad] = useState(false);
 
   return (
